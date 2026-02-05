@@ -4,7 +4,7 @@ import React from 'react';
 export const APIPlayground: React.FC = () => {
   const curlExample = `curl -X POST https://api.voxcheck.ai/v1/voice-detection \\
   -H "Content-Type: application/json" \\
-  -H "x-api-key: sk_live_your_api_key" \\
+  -H "x-api-key: sk_live_1754586413785_019d3048-2158-7a8b-8497-d4488543595d" \\
   -d '{
     "language": "Tamil",
     "audioFormat": "mp3",
@@ -74,7 +74,7 @@ export const APIPlayground: React.FC = () => {
                   {curlExample}
                 </pre>
               </div>
-              <button 
+              <button
                 onClick={() => navigator.clipboard.writeText(curlExample)}
                 className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
                 title="Copy to clipboard"
@@ -87,9 +87,9 @@ export const APIPlayground: React.FC = () => {
           <section className="space-y-4">
             <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400">Success Response</h3>
             <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
-               <pre className="text-xs font-mono text-slate-700">
-                  {responseExample}
-                </pre>
+              <pre className="text-xs font-mono text-slate-700">
+                {responseExample}
+              </pre>
             </div>
           </section>
         </div>
