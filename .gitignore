@@ -12,6 +12,16 @@ dist
 dist-ssr
 *.local
 
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# FAISS runtime index files
+backend/voice_index.faiss
+backend/voice_metadata.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

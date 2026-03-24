@@ -34,30 +34,43 @@ The system processes input data, applies intelligent algorithms, and produces me
 
 ## 🛠️ Tech Stack
 
-- **Programming Language:** Python / JavaScript  
-- **Frameworks & Libraries:**  
-  - (e.g., Flask / FastAPI / Node.js / React / Gradio)
+- **Programming Language:** TypeScript / Python  
+- **Frontend:** React 19, Vite, Tailwind CSS  
 - **AI / ML:**  
-  - (e.g., Machine Learning models, APIs, NLP, Computer Vision)
-- **Tools:**  
-  - Git, GitHub, VS Code
-
-> Update this section based on what you actually used.
+  - Google Gemini 3-Flash (voice authenticity classification)  
+  - **FAISS** (Facebook AI Similarity Search) – 128-dim voice embedding index for fast similarity search  
+  - Librosa – audio feature extraction (MFCCs, spectral centroid, chroma, …)  
+- **Backend:** Python Flask + Flask-CORS  
+- **Tools:** Git, GitHub, VS Code
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository`bash
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/rahulsvt-1907/GUVI-HACKATHON.git
 cd GUVI-HACKATHON
-npm install
-# or
-pip install -r requirements.txt
+```
 
-npm start
-# or
-python app.py
+### 2️⃣ Frontend (React)
+```bash
+npm install
+# Create a .env file and add your Gemini API key:
+# GEMINI_API_KEY=your_google_genai_api_key_here
+npm run dev        # http://localhost:3000
+```
+
+### 3️⃣ Backend – FAISS Similarity Search (Python)
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python app.py               # http://localhost:5000
+```
+
+> See [backend/README.md](backend/README.md) for full API reference and usage examples.
 
 
 ---
